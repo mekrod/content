@@ -1,36 +1,63 @@
 
+        /* WebKit and Opera browsers */
+        
+        @-webkit-keyframes spinner {
+            from {
+                -webkit-transform: rotateY(0deg);
+            }
+            to {
+                -webkit-transform: rotateY(-360deg);
+            }
+        }
+        /* all other browsers */
+        
+        @keyframes spinner {
+            from {
+                -moz-transform: rotateY(0deg);
+                -ms-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+            to {
+                -moz-transform: rotateY(-360deg);
+                -ms-transform: rotateY(-360deg);
+                transform: rotateY(-360deg);
+            }
+        }
+        
+        #stage {
+            margin: 1em auto;
+            -webkit-perspective: 1200px;
+            -moz-perspective: 1200px;
+            -ms-perspective: 1200px;
+            perspective: 1200px;
+        }
+        
+        #spinner {
+            -webkit-animation-name: spinner;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-duration: 6s;
+            -moz-animation-name: spinner;
+            -moz-animation-timing-function: linear;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-duration: 6s;
+            animation-name: spinner;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 6s;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+        
+        #spinner:hover {
+            -webkit-animation-play-state: paused;
+            -moz-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+    
         .body-initial {
             background-color: rgba(255, 255, 255, 1);
-        }
-        
-        .silex-id-1494531760930-4 {
-            min-height: 100px;
-            width: 100px;
-            background-color: rgb(255, 255, 255);
-            top: 115px;
-            left: 303px;
-        }
-        
-        .silex-id-1494531531901-1 {
-            min-height: 289px;
-            width: 498px;
-            background-color: rgb(255, 255, 255);
-            top: 71px;
-            left: 442px;
-        }
-        
-        .silex-id-1494532086110-6 {
-            min-height: 100px;
-            width: 100px;
-            top: 52px;
-            left: 310px;
-        }
-        
-        .silex-id-1494532134406-7 {
-            min-height: 205px;
-            width: 406px;
-            background-color: rgb(255, 255, 255);
-            top: 231px;
-            left: 197px;
         }
     
